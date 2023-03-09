@@ -3,10 +3,12 @@
   Open a command prompt and type in these two commands:
   $ gcc -o whateveryouwanttotypehere sizes.c
   $ ./whateveryouwanttotypehere
+
+  or in the same line:
+  $ gcc -o whateveryouwanttotypehere sizes.c && ./whateveryouwanttotypehere
 */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h> // For printf built-in function
 
 // Utility function, just in order to draw a line ...
 void draw_line()

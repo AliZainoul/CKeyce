@@ -1,3 +1,10 @@
+/*
+  In order to compile this program:
+  Open a command prompt and type in these two commands:
+  $ gcc -o whateveryouwanttotypehere sizes.c
+  $ ./whateveryouwanttotypehere
+*/
+
 #include <stdio.h>
 #include <string.h>
 

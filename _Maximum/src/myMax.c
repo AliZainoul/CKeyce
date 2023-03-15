@@ -1,7 +1,7 @@
-// Definition ==> Source program
-float _max(float _a, float _b)
-{
+// Definition of the function _max ==> Source Program
 
+float _max (float _a, float _b)
+{
   // Method 1
   if ( _a >= _b)
     return _a;

@@ -1,3 +1,10 @@
+/*
+  Compile this program by:
+  - Opening a command prompt
+  - Typing:
+    gcc -o r relationalOperators.c && ./r
+*/
+
 #include <stdio.h>
 // For built-in function printf
 

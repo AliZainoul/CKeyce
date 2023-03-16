@@ -1,3 +1,10 @@
+/*
+  Compile this program by:
+  - Opening a command prompt
+  - Typing:
+    gcc -o a arithmeticOperators.c && ./a
+*/
+
 #include <stdio.h>
 // For built-in function printf
 

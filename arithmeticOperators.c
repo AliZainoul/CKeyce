@@ -1,13 +1,18 @@
 #include <stdio.h>
 // For built-in function printf
 
-void draw_line(){ printf("---------------------------------------------- \n");}
 
+// Utility Function
+void draw_line() {
+  printf("---------------------------------------------- \n");
+}
+
+// Main Function
 int main()
 {
-
   int a = 109;
   int b = 10;
+
   draw_line();
   printf("We have that a = %d, and b = %d, so : \n" ,a ,b);
   draw_line();

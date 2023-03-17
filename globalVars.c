@@ -18,6 +18,15 @@ void draw_line() {
 // Defining (Declaring and initializing) a GLOBAL variable
 int g = 0;
 
+// Defining (Declaring and initializing) another GLOBAL variable
+int i = 10;
+/*
+  i here is equals to 10, whereas the i in the main function is equals to 1.
+  so the i here is GLOBAL, whereas the i in the main function is LOCAL
+  (to the main function).
+  NOTE THAT THEY HAVE THE SAME NAME !
+*/
+
 
 // Main Function
 int main()

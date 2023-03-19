@@ -9,23 +9,13 @@
 
 
 // Utility Functions:
-void printPointerInfos(const int* s)
-{
-  printf("The value of my pointer *pi is: %d \n", *s);
-  printf("The pointer p (or address of variable pointed by pi) is: %p \n", s);
-  printf("The address of my pointer &pi is: %p \n", &s);
-}
 
-void printVarInfos(const int* s)
-{
-  printf("The value of my variable is: %d \n", *s);
-  printf("The address of my variable is: %p \n", s);
-}
+// Declaration:
+void draw_line();
+void printVarInfos(const int* s);
+void printPointerInfos(const int* s);
+void printInfos(const int* x, const int* y);
 
-void draw_line()
-{
-  printf("---------------------------------------------------------------- \n");
-}
 
 
 int main()
@@ -91,23 +81,26 @@ int main()
   /*
     Let's now change the value of i.
   */
+  draw_line();
   printf("Before modification: i is equal to: %d \n" ,i);
   ++i;
-  printf("After modification: i is equal to: %d \n" ,i);
-  printVarInfos(&i);
   draw_line();
-  printPointerInfos(pi);
-
+  printf("After modification: i is equal to: %d \n" ,i);
+  draw_line();
+  printInfos(&i, pi);
+  draw_line();
   /*
     Let's now change the value of *pi
   */
-
+  draw_line();
   printf("Before modification (*pi) is equal to: %d \n" ,(*pi));
   (*pi)--;
-  printf("After modification (*pi) is equal to: %d \n" ,(*pi));
-  printVarInfos(&i);
   draw_line();
-  printPointerInfos(pi);
+  printf("After modification (*pi) is equal to: %d \n" ,(*pi));
+  draw_line();
+  printInfos(&i, pi);
+  draw_line();
+
 
   /*
     Because of the pointer was allocated in the *STACK*
@@ -128,4 +121,34 @@ int main()
 
   // This is how pointers work!
   return 0;
+}
+
+// Utility Functions:
+
+// Definitions:
+
+void draw_line()
+{
+  printf("-------------------------------------------------------------------");
+  printf("------- \n");
+}
+
+void printVarInfos(const int* s)
+{
+  printf("The value of my variable is: %d \n", *s);
+  printf("The address of my variable is: %p \n", s);
+}
+
+void printPointerInfos(const int* s)
+{
+  printf("The value of my pointer *pi is: %d \n", *s);
+  printf("The pointer p (or address of variable pointed by pi) is: %p \n", s);
+  printf("The address of my pointer &pi is: %p \n", &s);
+}
+
+void printInfos(const int* x, const int* y)
+{
+  printVarInfos(x);
+  draw_line();
+  printPointerInfos(y);
 }

@@ -1,11 +1,7 @@
 /*
   In order to compile this program:
   Open a command prompt and type in these two commands:
-  $ gcc -o whateveryouwanttotypehere sizes.c
-  $ ./whateveryouwanttotypehere
-
-  or in the same line:
-  $ gcc -o whateveryouwanttotypehere sizes.c && ./whateveryouwanttotypehere
+  $ gcc -o s sizes.c && ./s
 */
 
 #include <stdio.h> // For printf built-in function
@@ -18,55 +14,67 @@ void draw_line()
 
 
 // Main function
-int main()
+int main( int argc, char *argv[] )
 {
+
+  printf("The architecture system used for this test is %s bits\n", argv[1]);
+
   draw_line();
   // int specifications
   short int si = 0;
-  printf("Size of short int : %lu \n",sizeof(si));
+  printf("Size of short int : %lu bytes.\n",sizeof(si));
+  draw_line();
 
   unsigned short int usi = 0;
-  printf("Size of unsigned short int : %lu \n", sizeof(usi));
+  printf("Size of unsigned short int : %lu bytes. \n", sizeof(usi));
+  draw_line();
 
   unsigned int ui = 0;
-  printf("Size of unsigned int : %lu \n", sizeof(ui));
+  printf("Size of unsigned int : %lu bytes. \n", sizeof(ui));
+  draw_line();
 
   int i = 0;
-  printf("Size of int : %lu \n", sizeof(i));
-
+  printf("Size of int : %lu bytes. \n", sizeof(i));
+  draw_line();
 
   long int li = 0;
-  printf("Size of long int : %lu \n", sizeof(li));
+  printf("Size of long int : %lu bytes. \n", sizeof(li));
+  draw_line();
 
   unsigned long int uli = 0;
-  printf("Size of unsigned long int : %lu \n", sizeof(uli));
+  printf("Size of unsigned long int : %lu bytes. \n", sizeof(uli));
+  draw_line();
 
   long long int lli = 0;
-  printf("Size of long long int : %lu \n", sizeof(lli));
+  printf("Size of long long int : %lu bytes. \n", sizeof(lli));
 
   unsigned long long int ulli = 0;
-  printf("Size of unsigned long long int : %lu \n", sizeof(ulli));
+  printf("Size of unsigned long long int : %lu bytes. \n", sizeof(ulli));
+  draw_line();
 
 
   // char specifications
   signed char sc = 0;
-  printf("Size of signed char : %lu \n", sizeof(sc));
+  printf("Size of signed char : %lu bytes. \n", sizeof(sc));
+  draw_line();
 
   unsigned char uc = 0;
-  printf("Size of unsigned char : %lu \n", sizeof(uc));
+  printf("Size of unsigned char : %lu bytes. \n", sizeof(uc));
+  draw_line();
 
   // real numbers specifications
   float f = 0.0;
-  printf("Size of float : %lu \n", sizeof(f));
+  printf("Size of float : %lu bytes. \n", sizeof(f));
+  draw_line();
 
   double d = 0.0;
-  printf("Size of double : %lu \n", sizeof(d));
+  printf("Size of double : %lu bytes. \n", sizeof(d));
+  draw_line();
 
   long double ld = 0.0;
-  printf("Size of long double : %lu \n", sizeof(ld));
-
-
+  printf("Size of long double : %lu bytes. \n", sizeof(ld));
   draw_line();
+
   return 0;
 }
 
